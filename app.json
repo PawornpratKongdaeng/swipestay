@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "swipestay",
+    "slug": "swipestay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "swipestay",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nawinnw.swipestay",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.swipestay"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "fonts": {
+      "Lato-Bold": "./assets/fonts/Lato-BoldItalic.ttf"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0dd252c5-56a8-4c55-96af-fd0dd2e72339"
+      }
+    }
+  }
+}
