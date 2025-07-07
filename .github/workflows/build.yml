@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -38,10 +38,13 @@ jobs:
 
       - name: Download APK
         run: |
-          curl -o app-release.apk "${{ steps.get_apk_url.outputs.APK_URL }}"
+          curl -o swipestay.apk "${{ steps.get_apk_url.outputs.APK_URL }}"
+
+      - name: Rename APK
+        run: mv app-release.apk swipestay.apk
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: app-release.apk
-          path: app-release.apk
+          name: swipestay.apk
+          path: swipestay.apk
