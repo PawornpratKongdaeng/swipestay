@@ -1,27 +1,31 @@
 {
-  "build": {
-    "production": {
-      "ios": {
-        "distribution": "store",
-        "releaseChannel": "production"
-      },
-      "android": {
-        "buildType": "apk",
-        "releaseChannel": "production"
-      }
+    "cli": {
+      "appVersionSource": "local"
     },
-    "development": {
-      "ios": {
-        "distribution": "internal"
+    "build": {
+      "production": {
+        "ios": {
+          "distribution": "store",
+          "releaseChannel": "production"
+        },
+        "android": {
+          "buildType": "apk",
+          "releaseChannel": "production"
+        }
       },
-      "android": {
-        "buildType": "apk"
-      }
-    },
-    "preview": {
-      "android": {
-        "buildType": "apk"
+      "development": {
+        "ios": {
+          "distribution": "internal"
+        },
+        "android": {
+          "buildType": "apk"
+        }
+      },
+      "preview": {
+        "android": {
+          "buildType": "apk"
+        }
       }
     }
   }
-}
+  
